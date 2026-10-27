@@ -1,0 +1,103 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "aiengineering",
+    "nameCn": "AI Engineering from Scratch",
+    "repoName": "ai-engineering-from-scratch-deploy-guide",
+    "oneLiner": "74.4k stars，MIT，从零学 AI 工程的课程仓库，可装成 Agent 技能当私人导师",
+    "officialRepo": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "officialDocs": "https://github.com/rohitg00/ai-engineering-from-scratch#quick-start",
+    "stars": "74.4k",
+    "license": "MIT",
+    "highlights": [
+      "74.4k stars：2026-03 建仓，课程类里增长最快",
+      "阶段化：从 setup 到部署，按顺序推进",
+      "可装成技能：Agent 当导师，边讲边练",
+      "课程有产出：每节都有可运行代码",
+      "含 Docker 内容：覆盖容器化与部署",
+      "MIT：可改可二次分发"
+    ],
+    "mcpSupport": "不是 MCP server，通过 skills CLI 安装为 Agent 技能；本仓库不注册 MCP。",
+    "webuiUrl": "",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-27",
+    "verification": [
+      [
+        "仓库元数据已核对：74.4k stars、MIT、2026-03 建仓",
+        "已核对 2026-10-27"
+      ],
+      [
+        "README 确认 npx skills add rohitg00/ai-engineering-from-scratch 为安装方式",
+        "已核对 2026-10-27"
+      ],
+      [
+        "README 确认实验环境需要 Python 3，Docker 章节需要 Docker",
+        "已核对 2026-10-27"
+      ],
+      [
+        "未实测技能安装与课程实验",
+        "说明 2026-10-27"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "requires": [
+        "node"
+      ],
+      "steps": [
+        "npx -y skills add rohitg00/ai-engineering-from-scratch",
+        "npx -y skills list | grep -qi 'ai-engineering' && echo '课程技能已安装' || echo '未检测到，重跑安装并选择客户端'"
+      ],
+      "stepsPs": [
+        "npx.cmd -y skills add rohitg00/ai-engineering-from-scratch",
+        "npx.cmd -y skills list | Select-String 'ai-engineering'"
+      ],
+      "source": "https://github.com/rohitg00/ai-engineering-from-scratch#quick-start"
+    },
+    "pitfalls": [
+      "装完找不到命令：不同宿主调用方式不同",
+      "实验跑不起来：先确认 Python 3 与依赖装好",
+      "Docker 章节失败：确认 Docker Desktop 已启动",
+      "版本不一致：以仓库当前源码为准",
+      "一次装太多技能：只装课程技能，避免上下文拥挤",
+      "Windows 路径问题：实验尽量放在无空格目录"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/ai-engineering-from-scratch-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/ai-engineering-from-scratch-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "AI Engineering 部署",
+    "AI 工程 课程",
+    "从零学 AI",
+    "AI Agent 技能",
+    "skills CLI 安装",
+    "RAG 教程",
+    "AI 部署 教程",
+    "Docker AI 课程",
+    "ai-engineering-from-scratch",
+    "AI 工程 中文"
+  ],
+  "topics": [
+    "ai-engineering",
+    "education",
+    "course",
+    "llm",
+    "agents",
+    "python"
+  ]
+}
